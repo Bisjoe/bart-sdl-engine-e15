@@ -9,7 +9,7 @@ public:
 	Resources(SDL_Renderer* renderer);
 	~Resources();
 
-	SDL_Texture* GetTexture(std::string path);
+	SDL_Texture* GetTexture(std::string* path);
 
 private:
 	SDL_Texture* LoadTexture(const char* filepath);

@@ -12,6 +12,8 @@ public:
 	virtual ~Sprite();
 
 	void SetPosition(int x, int y){ dstRect->x = x; dstRect->y = y; }
+	void SetVisible(bool isVisible){ this->isVisible = isVisible; }
+	void SetTexture(std::string* path);
 
 protected:
 	void Start();
@@ -20,9 +22,10 @@ protected:
 	void Stop();
 
 	SDL_Rect* dstRect;
-
-private:
-	SDL_Texture* texture;
 	
+private:
+	bool isVisible;
+	SDL_Texture* texture;
+
 };
 

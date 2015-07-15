@@ -13,13 +13,13 @@ Resources::~Resources()
 {
 }
 
-SDL_Texture* Resources::GetTexture(std::string path)
+SDL_Texture* Resources::GetTexture(std::string* path)
 {
-	if (textures[path] == nullptr)
+	if (textures[*path] == nullptr)
 	{
-		textures[path] = LoadTexture(path.c_str());
+		textures[*path] = LoadTexture((*path).c_str());
 	}
-	return textures[path];
+	return textures[*path];
 }
 
 SDL_Texture* Resources::LoadTexture(const char* filepath)

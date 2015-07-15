@@ -5,12 +5,20 @@ Sprite::Sprite()
 	, dstRect(nullptr)
 	, isVisible(true)
 {
-
+	dstRect = new SDL_Rect();
+	dstRect->x = 0;
+	dstRect->y = 0;
 }
 
 Sprite::Sprite(std::string path)
-	: isVisible(true)
+	: texture(nullptr)
+	, dstRect(nullptr)
+	, isVisible(true)
 {
+	dstRect = new SDL_Rect();
+	dstRect->x = 0;
+	dstRect->y = 0;
+
 	SetTexture(&path);
 }
 
@@ -21,10 +29,6 @@ Sprite::~Sprite()
 void Sprite::SetTexture(std::string* path)
 {
 	texture = Engine::GetInstance()->GetResources()->GetTexture(path);
-
-	dstRect = new SDL_Rect();
-	dstRect->x = 0;
-	dstRect->y = 0;
 
 	if (texture)
 	{

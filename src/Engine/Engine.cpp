@@ -18,7 +18,7 @@ Engine::~Engine()
 	delete mResources;
 }
 
-void Engine::Init(int width = DEFAULT_WINDOW_WIDTH, int height = DEFAULT_WINDOW_HEIGHT)
+void Engine::Init(int width, int height)
 {
 	mIsInitialized = true;
 

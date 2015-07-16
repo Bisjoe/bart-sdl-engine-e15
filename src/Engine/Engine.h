@@ -39,7 +39,8 @@ public:
 	SDL_Renderer* GetRenderer() { return mRenderer; }
 	Resources* GetResources() { return mResources; }
 
-	void Init(int width, int height);
+	
+	void Init(int width = DEFAULT_WINDOW_WIDTH, int height = DEFAULT_WINDOW_HEIGHT);
 	void Start();
 	void Stop();
 

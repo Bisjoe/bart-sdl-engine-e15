@@ -18,7 +18,7 @@ Engine::~Engine()
 	delete mResources;
 }
 
-void Engine::Init()
+void Engine::Init(int width = DEFAULT_WINDOW_WIDTH, int height = DEFAULT_WINDOW_HEIGHT)
 {
 	mIsInitialized = true;
 
@@ -39,7 +39,7 @@ void Engine::Init()
 		mWindow = SDL_CreateWindow(ss.str().c_str(),
 			SDL_WINDOWPOS_UNDEFINED,
 			SDL_WINDOWPOS_UNDEFINED,
-			DEFAULT_WINDOW_WIDTH, DEFAULT_WINDOW_HEIGHT,
+			width, height,
 			SDL_WINDOW_SHOWN);
 
 		// Validate that a window has been created

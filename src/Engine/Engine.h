@@ -39,7 +39,7 @@ public:
 	SDL_Renderer* GetRenderer() { return mRenderer; }
 	Resources* GetResources() { return mResources; }
 
-	void Init();
+	void Init(int width, int height);
 	void Start();
 	void Stop();
 

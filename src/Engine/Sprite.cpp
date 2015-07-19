@@ -4,8 +4,8 @@ Sprite::Sprite()
 	: texture(nullptr)
 	, dstRect(nullptr)
 	, isVisible(true)
-	, posX(0.f)
-	, posY(0.f)
+	, x(0.f)
+	, y(0.f)
 {
 	dstRect = new SDL_Rect();
 	dstRect->x = 0;
@@ -16,8 +16,8 @@ Sprite::Sprite(std::string path)
 	: texture(nullptr)
 	, dstRect(nullptr)
 	, isVisible(true)
-	, posX(0.f)
-	, posY(0.f)
+	, x(0.f)
+	, y(0.f)
 {
 	dstRect = new SDL_Rect();
 	dstRect->x = 0;

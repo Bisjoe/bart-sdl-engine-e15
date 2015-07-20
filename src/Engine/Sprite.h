@@ -16,7 +16,7 @@ public:
 
 	void SetVisible(bool isVisible){ this->isVisible = isVisible; }
 	void SetTexture(std::string* path);
-	void SetPosition(float x, float y) { this->x = x; this->y = y; dstRect->x = x; dstRect->y = y; }
+	void SetPosition(float x, float y) { this->x = x; this->y = y; dstRect->x = (int)x; dstRect->y = (int)y; }
 
 protected:
 	void Start();

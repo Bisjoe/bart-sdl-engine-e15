@@ -1,5 +1,6 @@
 #include "Engine.h"
 
+
 Engine* Engine::instance = nullptr;
 
 Engine::Engine()
@@ -7,6 +8,7 @@ Engine::Engine()
 	, mWindow(nullptr)
 	, mRenderer(nullptr) 
 	, mEvent(nullptr)
+	, inputs(nullptr)
 { 
 }
 
@@ -16,6 +18,8 @@ Engine::~Engine()
 	SDL_DestroyRenderer(mRenderer);
 	delete mEvent;
 	delete mResources;
+	delete inputs;
+	inputs = nullptr;
 }
 
 void Engine::Init()
@@ -50,6 +54,7 @@ void Engine::Init()
 		}
 		else
 		{
+			inputs = new Input();
 			mRenderer = SDL_CreateRenderer(mWindow, -1,
 				SDL_RENDERER_PRESENTVSYNC | SDL_RENDERER_ACCELERATED);
 
@@ -97,18 +102,18 @@ void Engine::Run()
 	{
 		while (SDL_PollEvent(mEvent) != 0)
 		{
+			inputs->Poll(*mEvent);
 			switch (mEvent->type)
 			{
 			case SDL_QUIT:
 				mQuit = true;
 				break;
-			case SDL_KEYDOWN:
-				if (mEvent->key.keysym.sym == SDLK_ESCAPE)
-				{
-					mQuit = true;
-					break;
-				}
 			}
+		}
+
+		if (inputs->IsKeyPressed(SDL_SCANCODE_ESCAPE))
+		{
+			mQuit = true;
 		}
 
 		Update();

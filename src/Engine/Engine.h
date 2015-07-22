@@ -3,6 +3,7 @@
 #include "Common.h"
 #include "Component.h"
 #include "Resources.h"
+#include "Input.h"
 
 class Engine
 {
@@ -42,6 +43,7 @@ public:
 	void Init();
 	void Start();
 	void Stop();
+	Input* GetInput(){ return inputs; }
 
 private:
 
@@ -53,6 +55,7 @@ private:
 	SDL_Window* mWindow;
 	SDL_Renderer* mRenderer;
 	SDL_Event* mEvent;
+	Input* inputs;
 
 	bool mIsInitialized;
 }; 

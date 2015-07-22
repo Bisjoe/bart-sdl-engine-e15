@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Sprite.h"
+#include "Engine.h"
 
 #define FROG_PATH "Images/Hello.bmp"
 
@@ -17,5 +18,7 @@ protected:
 private:
 	float currentPosX;
 	static const float speed;
+
+	bool isPressed;
 };
 

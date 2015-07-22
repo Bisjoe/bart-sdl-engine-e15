@@ -39,7 +39,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>..\..\dependencies\SDL2_image-2.0.0\include;..\..\dependencies\SDL2-2.0.3\include;$(IncludePath)</IncludePath>
+    <IncludePath>..\..\dependencies\SDL2_image-2.0.0\include;..\..\dependencies\SDL2-2.0.3\include;..\..\dependencies\TP1_Library;$(IncludePath)</IncludePath>
     <LibraryPath>..\..\dependencies\SDL2_image-2.0.0\lib\x86;..\..\dependencies\SDL2-2.0.3\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -72,7 +72,6 @@
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Input.cpp" />
-    <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Resources.cpp" />
     <ClCompile Include="Sprite.cpp" />
   </ItemGroup>
@@ -81,9 +80,13 @@
     <ClInclude Include="Component.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="Input.h" />
-    <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Resources.h" />
     <ClInclude Include="Sprite.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\dependencies\TP1_Library\TP1_Library.vcxproj">
+      <Project>{cbd19dd0-e306-4841-82a2-878df815352d}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

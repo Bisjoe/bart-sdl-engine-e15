@@ -72,6 +72,7 @@
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Input.cpp" />
+    <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Resources.cpp" />
     <ClCompile Include="Sprite.cpp" />
   </ItemGroup>
@@ -80,6 +81,7 @@
     <ClInclude Include="Component.h" />
     <ClInclude Include="Engine.h" />
     <ClInclude Include="Input.h" />
+    <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Resources.h" />
     <ClInclude Include="Sprite.h" />
   </ItemGroup>

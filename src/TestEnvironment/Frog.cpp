@@ -26,7 +26,5 @@ void Frog::Update()
 		std::cout << "key held" << std::endl;
 	}
 
-
-	currentPosX += speed;
-	dstRect->x = currentPosX;
+	SetPosition(GetX() + speed, GetY());
 }

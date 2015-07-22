@@ -11,9 +11,12 @@ public:
 	Sprite(std::string path);
 	virtual ~Sprite();
 
-	void SetPosition(int x, int y){ dstRect->x = x; dstRect->y = y; }
+	float GetX() const { return x; }
+	float GetY() const { return y; }
+
 	void SetVisible(bool isVisible){ this->isVisible = isVisible; }
 	void SetTexture(std::string* path);
+	void SetPosition(float x, float y) { this->x = x; this->y = y; dstRect->x = (int)x; dstRect->y = (int)y; }
 
 protected:
 	void Start();
@@ -21,10 +24,13 @@ protected:
 	void Draw();
 	void Stop();
 
-	SDL_Rect* dstRect;
-	
 private:
+
 	bool isVisible;
+	float x;
+	float y;
+
+	SDL_Rect* dstRect;
 	SDL_Texture* texture;
 
 };

@@ -8,6 +8,8 @@
 
 #include "SDL.h"
 #include "SDL_image.h"
+#include "Vector.h"
+#include "Rectangle.h"
 
 #define DEFAULT_WINDOW_TITLE	"SDL Engine: "
 #define DEFAULT_WINDOW_WIDTH	800

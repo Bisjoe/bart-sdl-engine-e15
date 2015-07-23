@@ -13,10 +13,12 @@ public:
 
 	float GetX() const { return x; }
 	float GetY() const { return y; }
+	Vector2D GetPosition() const { return { x, y }; }
 
 	void SetVisible(bool isVisible){ this->isVisible = isVisible; }
 	void SetTexture(std::string* path);
 	void SetPosition(float x, float y) { this->x = x; this->y = y; dstRect->x = (int)x; dstRect->y = (int)y; }
+	void SetPosition(Vector2D &v){ SetPosition(v.x, v.y); }
 
 protected:
 	void Start();

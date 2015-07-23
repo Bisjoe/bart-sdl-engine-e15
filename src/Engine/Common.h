@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <vector>
 #include <map>
+#include <string>
 
 #include "SDL.h"
 #include "SDL_image.h"

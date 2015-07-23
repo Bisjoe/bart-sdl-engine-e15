@@ -27,9 +27,11 @@ protected:
 	void Draw();
 	void Stop();
 
+	bool isVisible;
+
 private:
 
-	bool isVisible;
+	
 	float x;
 	float y;
 

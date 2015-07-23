@@ -5,6 +5,9 @@
 #include "Resources.h"
 #include "Input.h"
 
+#define cEngine Engine::GetInstance()
+#define cInput cEngine->GetInput()
+
 class Engine
 {
 #pragma region SINGLETON

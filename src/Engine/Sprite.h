@@ -14,6 +14,7 @@ public:
 	float GetX() const { return x; }
 	float GetY() const { return y; }
 	Vector2D GetPosition() const { return { x, y }; }
+	bool GetVisible(){ return isVisible; }
 
 	void SetVisible(bool isVisible){ this->isVisible = isVisible; }
 	void SetTexture(std::string* path);

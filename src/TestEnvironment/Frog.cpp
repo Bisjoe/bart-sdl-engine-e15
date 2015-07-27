@@ -2,6 +2,8 @@
 
 const float Frog::speed = 0.5;
 
+#define cEngine Engine::GetInstance()
+
 Frog::Frog()
 	: Sprite(FROG_PATH)
 	, currentPosX(0.f)
@@ -15,16 +17,21 @@ Frog::~Frog()
 
 void Frog::Update()
 {
+	//Movement inputs for the frog
+	Vector2D dir = {
+		cInput->IsKeyPressed(SDL_SCANCODE_LEFT) &&
+		(!cInput->IsKeyPressed(SDL_SCANCODE_UP) &&
+		!cInput->IsKeyPressed(SDL_SCANCODE_DOWN)) ? -1 : 0 + // for X movements
+		cInput->IsKeyPressed(SDL_SCANCODE_RIGHT) &&
+		(!cInput->IsKeyPressed(SDL_SCANCODE_UP)) &&
+		!cInput->IsKeyPressed(SDL_SCANCODE_DOWN) ? 1 : 0
+		,
+		cInput->IsKeyPressed(SDL_SCANCODE_UP) ? -1 : 0 + // for Y movements
+		cInput->IsKeyPressed(SDL_SCANCODE_DOWN) ? 1 : 0
+	};
 
-	if (Engine::GetInstance()->GetInput()->IsKeyPressed(SDL_SCANCODE_UP))
+	if (Normalize(&dir))
 	{
-		std::cout << "key pressed" << std::endl;
+		SetPosition(Add(&GetPosition(), &Scale(&dir, speed)));
 	}
-
-	if (Engine::GetInstance()->GetInput()->IsKeyHeld(SDL_SCANCODE_UP))
-	{
-		std::cout << "key held" << std::endl;
-	}
-
-	SetPosition(GetX() + speed, GetY());
 }

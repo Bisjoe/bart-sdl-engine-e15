@@ -125,9 +125,9 @@ void Engine::Run()
 
 void Engine::Update()
 {
-	std::vector<Component*>::const_iterator iter;
-	for (iter = Component::components.begin();
-		iter != Component::components.end(); iter++)
+	std::vector<Component*>::const_reverse_iterator iter;
+	for (iter = Component::components.rbegin();
+		iter != Component::components.rend(); ++iter)
 	{
 		(*iter)->Update();
 	}

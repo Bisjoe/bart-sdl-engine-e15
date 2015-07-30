@@ -72,7 +72,7 @@ bool Rectangle::CollidesWith(const Rectangle* const rect) const {
 
 //Returns true if coordinates are in the rectangle
 bool Rectangle::Contains(const float x, const float y) const {
-	bool xIn = (x >= GetX()) && (x <= (GetX() + GetWidth()));
+bool xIn = (x >= GetX()) && (x <= (GetX() + GetWidth()));
 	bool yIn = (y >= GetY()) && (y <= (GetY() + GetHeight())); 
 	return xIn && yIn;
 }

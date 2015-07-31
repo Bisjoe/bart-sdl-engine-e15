@@ -39,13 +39,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-<<<<<<< HEAD
     <IncludePath>..\..\dependencies\SDL2_mixer-2.0.0\include;..\..\dependencies\SDL2_ttf-2.0.12\include;..\..\dependencies\SDL2_image-2.0.0\include;..\..\dependencies\SDL2-2.0.3\include;..\..\dependencies\TP1_Library;$(IncludePath)</IncludePath>
     <LibraryPath>..\..\SDL2_mixer-2.0.0\lib\x86;..\..\dependencies\SDL2_ttf-2.0.12\lib\x86;..\..\dependencies\SDL2_image-2.0.0\lib\x86;..\..\dependencies\SDL2-2.0.3\lib\x86;$(LibraryPath)</LibraryPath>
-=======
-    <IncludePath>..\..\dependencies\SDL2_image-2.0.0\include;..\..\dependencies\SDL2-2.0.3\include;$(IncludePath)</IncludePath>
-    <LibraryPath>..\..\dependencies\SDL2_image-2.0.0\lib\x86;..\..\dependencies\SDL2-2.0.3\lib\x86;$(LibraryPath)</LibraryPath>
->>>>>>> branch 'master' of https://github.com/Bisjoe/bart-sdl-engine-e15.git
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -74,11 +69,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <ClCompile Include="Audio.cpp" />
-=======
     <ClCompile Include="Circle.cpp" />
->>>>>>> branch 'master' of https://github.com/Bisjoe/bart-sdl-engine-e15.git
     <ClCompile Include="Component.cpp" />
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Input.cpp" />
@@ -86,18 +78,12 @@
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Resources.cpp" />
     <ClCompile Include="Sprite.cpp" />
-<<<<<<< HEAD
     <ClCompile Include="Text.cpp" />
-=======
     <ClCompile Include="Vector.cpp" />
->>>>>>> branch 'master' of https://github.com/Bisjoe/bart-sdl-engine-e15.git
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD
     <ClInclude Include="Audio.h" />
-=======
     <ClInclude Include="Circle.h" />
->>>>>>> branch 'master' of https://github.com/Bisjoe/bart-sdl-engine-e15.git
     <ClInclude Include="Common.h" />
     <ClInclude Include="Component.h" />
     <ClInclude Include="Engine.h" />
@@ -106,16 +92,13 @@
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Resources.h" />
     <ClInclude Include="Sprite.h" />
-<<<<<<< HEAD
     <ClInclude Include="Text.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\dependencies\TP1_Library\TP1_Library.vcxproj">
       <Project>{cbd19dd0-e306-4841-82a2-878df815352d}</Project>
     </ProjectReference>
-=======
     <ClInclude Include="Vector.h" />
->>>>>>> branch 'master' of https://github.com/Bisjoe/bart-sdl-engine-e15.git
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -34,12 +34,9 @@ protected:
 	bool isVisible;
 
 private:
-	
 	float x;
 	float y;
-
 	SDL_Rect* dstRect;
 	SDL_Texture* texture;
-
 };
 

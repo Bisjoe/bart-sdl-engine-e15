@@ -10,6 +10,7 @@ Sprite::Sprite()
 	dstRect = new SDL_Rect();
 	dstRect->x = 0;
 	dstRect->y = 0;
+
 }
 
 Sprite::Sprite(float x, float y)
@@ -50,6 +51,16 @@ void Sprite::SetTexture(std::string* path)
 	if (texture)
 	{
 		SDL_QueryTexture(texture, 0, 0, &dstRect->w, &dstRect->h);
+	}
+}
+
+void Sprite::SetTexture(SDL_Texture* tex)
+{
+	texture = tex;
+	if (tex)
+	{
+		SDL_QueryTexture(tex, 0, 0, &dstRect->w, &dstRect->h);
+		
 	}
 }
 

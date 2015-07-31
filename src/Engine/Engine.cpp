@@ -28,6 +28,8 @@ void Engine::Init(int width, int height)
 
 	mEvent = new SDL_Event();
 
+	TTF_Init();
+
 	// Start SDL
 	if (SDL_Init(SDL_INIT_EVERYTHING) < 0)
 	{
@@ -80,7 +82,6 @@ void Engine::Start()
 	{
 		(*iter)->Start();
 	}
-
 	Run();
 }
 
@@ -143,8 +144,8 @@ void Engine::Draw()
 	{
 		(*iter)->Draw();
 	}
-
 	SDL_RenderPresent(mRenderer);
+
 }
 
 

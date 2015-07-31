@@ -4,6 +4,8 @@
 #include "Component.h"
 #include "Resources.h"
 #include "Input.h"
+#include "SDL_ttf.h"
+
 
 #define cEngine Engine::GetInstance()
 #define cInput cEngine->GetInput()

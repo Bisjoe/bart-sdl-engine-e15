@@ -12,6 +12,18 @@ Sprite::Sprite()
 	dstRect->y = 0;
 }
 
+Sprite::Sprite(float x, float y)
+	: texture(nullptr)
+	, dstRect(nullptr)
+	, isVisible(true)
+	, x(x)
+	, y(y)
+{
+	dstRect = new SDL_Rect();
+	dstRect->x = x;
+	dstRect->y = y;
+}
+
 Sprite::Sprite(std::string path)
 	: texture(nullptr)
 	, dstRect(nullptr)

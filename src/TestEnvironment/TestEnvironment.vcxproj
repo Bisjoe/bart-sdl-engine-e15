@@ -39,8 +39,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>..\Engine;..\..\dependencies\SDL2_image-2.0.0\include;..\..\dependencies\SDL2-2.0.3\include;..\..\dependencies\TP1_Library;$(IncludePath)</IncludePath>
-    <LibraryPath>..\..\dependencies\SDL2_image-2.0.0\lib\x86;..\..\dependencies\SDL2-2.0.3\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>..\..\dependencies\SDL2_mixer-2.0.0\include;..\..\dependencies\SDL2_ttf-2.0.12\include;..\Engine;..\..\dependencies\SDL2_image-2.0.0\include;..\..\dependencies\SDL2-2.0.3\include;..\..\dependencies\TP1_Library;$(IncludePath)</IncludePath>
+    <LibraryPath>..\..\dependencies\SDL2_mixer-2.0.0\lib\x86;..\..\dependencies\SDL2_ttf-2.0.12\lib\x86;..\..\dependencies\SDL2_image-2.0.0\lib\x86;..\..\dependencies\SDL2-2.0.3\lib\x86;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -50,7 +50,7 @@
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <SubSystem>Console</SubSystem>
     </Link>
   </ItemDefinitionGroup>
@@ -70,6 +70,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Car.cpp" />
+    <ClCompile Include="Font.cpp" />
     <ClCompile Include="Frog.cpp" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="Obstacle.cpp" />
@@ -77,6 +78,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Car.h" />
+    <ClInclude Include="Font.h" />
     <ClInclude Include="Frog.h" />
     <ClInclude Include="Game.h" />
     <ClInclude Include="Obstacle.h" />

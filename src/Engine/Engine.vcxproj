@@ -81,11 +81,9 @@
     <ClCompile Include="Sprite.cpp" />
     <ClCompile Include="Text.cpp" />
     <ClCompile Include="Vector.cpp" />
-    <ClCompile Include="Vector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Audio.h" />
-    <ClInclude Include="Circle.h" />
     <ClInclude Include="Circle.h" />
     <ClInclude Include="Common.h" />
     <ClInclude Include="Component.h" />
@@ -101,7 +99,6 @@
     <ProjectReference Include="..\..\dependencies\TP1_Library\TP1_Library.vcxproj">
       <Project>{cbd19dd0-e306-4841-82a2-878df815352d}</Project>
     </ProjectReference>
-    <ClInclude Include="Vector.h" />
     <ClInclude Include="Vector.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
